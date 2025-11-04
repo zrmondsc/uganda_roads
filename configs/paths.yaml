@@ -1,0 +1,11 @@
+data:
+  external: data/external
+  raw: data/raw
+  processed: data/processed
+  results: results
+
+outputs:
+  dynamic_maps: outputs/maps/dynamic
+  static_maps: output/maps/static
+  figures: output/figures
+  tables: outputs/tables
