@@ -1,1 +1,2 @@
 data/processed/*.geojson
+outputs/maps/dynamic/*.hmtl
