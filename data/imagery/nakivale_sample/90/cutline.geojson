@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "cutline",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 30.839107484316067, -0.879518505017436 ], [ 30.848088875964624, -0.879523730565185 ], [ 30.848094029724493, -0.87048286133418 ], [ 30.839112659545368, -0.870477689509266 ], [ 30.839107484316067, -0.879518505017436 ] ] ] } }
+]
+}

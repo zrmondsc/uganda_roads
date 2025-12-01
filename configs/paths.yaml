@@ -3,9 +3,14 @@ data:
   raw: data/raw
   processed: data/processed
   results: results
+  imagery: data/imagery
 
 outputs:
   dynamic_maps: outputs/maps/dynamic
   static_maps: output/maps/static
   figures: output/figures
   tables: outputs/tables
+
+imagery:
+  # Maxar Nakivale chips indexed by gridcell number:
+  nakivale_sample: data/imagery/nakivale_sample

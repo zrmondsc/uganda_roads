@@ -1,0 +1,16 @@
+"data\external\refugeehosting_regions.geojson"
+acquired from Jamon Van Den Hoek
+
+"data\external\UG_markets_merged.geojson"
+acquired from Ben Norrito 11/10/25
+
+
+"data\external\uganda_rivers.geojson"
+acquired via EnergyData.info, updated 2014
+
+
+"data\external\UNHCR_poc_boundaries-Uganda_attributed.geojson"
+acquired from Jamon Van Den Hoek 
+
+"data\external\maxar_footprints_with_sensor.geojson"
+acquired from Zhanpei Fang
