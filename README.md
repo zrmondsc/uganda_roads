@@ -49,7 +49,7 @@ uganda/
 ├── libs/
 │ └── init.py # Local Python package, currently empty
 │
-├── notebooks/ # Jupyter notebooks for EDA
+├── notebooks/ # Jupyter notebooks for EDA and data processing
 │ ├── 00_exploratory_osm.ipynb # Learning osmnx library
 │ ├── 00b_exploratory_hexbins.ipynb # Building hexagonal mesh for zonal statistics
 │ ├── 00c_exploratory_grids.ipynb # Building rectangular mesh for zonal statistics
