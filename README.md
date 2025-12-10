@@ -93,7 +93,7 @@ uganda/
 
 ### **1. Maxar Scene Indexing**
 - Python utility scans the Maxar archive and creates a JSON index mapping each filename to its full filepath. This speeds up repeated access during experimentation.
-- Maxar images are accessed via GDALINFO and converted to .TIF files via GDALWARP, full metadata is preserved. 
+- Maxar images are accessed via `gdalinfo` and converted to `.TIF` files via `gdalwarp`, full metadata is preserved. 
 
 ### **2. AOI Clipping**
 - Python notebook creates 1km x 1km grid cells over Nakivale, Uganda (with 500m buffer), randomly subsets 300 grid cells and exports as .geojson.
