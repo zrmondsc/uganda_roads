@@ -69,7 +69,6 @@ uganda/
 │ └── 00_create_spatial_index.py # (Run this on the HPC) Generates a .json file containing an .json file of all maxar images. Key-Value pairs map filenames with full filepaths.
 │ └── 01_search_chip_maxar_metadata.py # (Run this on the HPC) Downloads Maxar images that overlap with AOI, uses 00 spatial index to avoid repeated recursive searches through the full filesystem.
 │
-├── .gitignore
 ├── environment.yml # Conda environment specification
 └── README.md
 ```
