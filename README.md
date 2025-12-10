@@ -32,6 +32,7 @@ The performance of deep learning road extraction in **rural humanitarian context
 
 ## **Repo Structure**
 
+```bash
 uganda/
 │
 ├── configs/
@@ -71,6 +72,7 @@ uganda/
 ├── .gitignore
 ├── environment.yml # Conda environment specification
 └── README.md
+```
 
 ---
 
