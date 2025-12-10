@@ -93,7 +93,7 @@ def copy_metadata(image_path, out_dir):
                 src = os.path.join(src_dir, f)
                 dst = os.path.join(out_dir, f)
                 shutil.copy(src, dst)
-                print(f"   :) Copied metadata --> {f}")
+                print(f":) Copied metadata --> {f}")
                 break # time saving, exits inner loop
 
 
@@ -129,7 +129,7 @@ for idx, grid_cell in grid_cells.iterrows():
         # get image path
         image_path = ntf_index.get(filename)
         if image_path is None:
-            print(f"   Missing in NTF index: {filename}")
+            print(f"Missing in NTF index: {filename}")
             continue
 
         print(f"Found image: {image_path}")
@@ -139,14 +139,11 @@ for idx, grid_cell in grid_cells.iterrows():
 
         # If chip exists do not redo clipping
         if os.path.exists(tif_path):
-            print(f"   --> Chip already exists, metadata updated.")
+            print(f"--> Chip already exists, metadata updated.")
             continue
 
         # ---------------------------------------------------------
-        # CLIP WITH VRT + GDALWARP (reads REAL JP2 image now)
-        # ---------------------------------------------------------
-        # ---------------------------------------------------------
-        # DIRECT GDALWARP CLIP (no VRT)
+        # GDALWARP CLIP
         # ---------------------------------------------------------
         try:
             # build a single-feature geodataframe that contains one grid cell, reprojected to GCS
@@ -177,10 +174,10 @@ for idx, grid_cell in grid_cells.iterrows():
 
             # check if output is valid
             if result.returncode != 0 or not os.path.exists(tif_path):
-                print("   --> gdalwarp produced no output (possibly outside footprint). Skipping.") # .returncode = 0 is GDALs way of indicating a successful operation
+                print("--> gdalwarp produced no output (possibly outside footprint). Skipping.") # .returncode = 0 is GDALs way of indicating a successful operation
                 continue
 
-            print(f"   :) SAVED CHIP --> {tif_path}") # SUCCESS if the returncode is 0
+            print(f":) SAVED CHIP --> {tif_path}") # SUCCESS if the returncode is 0
 
         except Exception as e:
             print(f"ERROR clipping {filename}: {e}")
