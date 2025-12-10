@@ -100,8 +100,7 @@ uganda/
 - .geojson file used with `gdalwarp -cutline` to download and crop overlapping Maxar scenes. Processed 1km x 1km maxar images are saved as GeoTiffs. 
 
 ### **3. Tiling**
-Images are tiled into **512 × 512 px** chips (~256 × 256 m).  
-This produces analysis-ready data for future CNN training.
+- Images are tiled into **512 × 512 px** chips (~256 × 256 m). This produces analysis-ready data for future CNN training.
 
 ### **4. Rasterizing Training Labels**
 - OSM + manual footpaths --> raster masks aligned to image tiles  
