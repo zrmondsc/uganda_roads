@@ -4,7 +4,9 @@ data/imagery/nakivale_sample/*
 scripts/search_chip_maxar.py
 data/external/hotosm_populated_places.geojson
 data/external/hotosm_waterways.geojson
-docs/presentation/*
-docs/other/*
+docs/presentation/*.docx
+docs/other/*.docx
+docs/other/*.xlsx
+docs/other/*.png
 docs/drafts/*.pdf
 .env
