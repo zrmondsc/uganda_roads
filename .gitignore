@@ -5,6 +5,7 @@ scripts/search_chip_maxar.py
 data/external/hotosm_populated_places.geojson
 data/external/hotosm_waterways.geojson
 docs/presentation/*.docx
+docs/presentation/*.pptx
 docs/other/*.docx
 docs/other/*.xlsx
 docs/other/*.png
