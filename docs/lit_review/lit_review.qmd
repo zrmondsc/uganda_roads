@@ -1,0 +1,173 @@
+---
+title: "Literature Review: Road Extraction"
+author: Zachary Mondschein
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    toc: true
+    number-sections: true
+bibliography: C:\Users\Zachary\phd_classes\uganda\bib\road_extraction.bib
+csl: C:\Users\Zachary\phd_classes\uganda\bib\apa.csl
+---
+
+## Towards Modeling Road Access Deprivation in Sub-Saharan Africa Based on a New Accessibility Metric and Road Quality [@hafnerModelingRoadAccess2025]
+
+### Abstract
+Access to motorable roads is a critical dimension of urban infrastructure, particularly in rapidly urbanizing regions such as Sub-Saharan Africa. Yet, many urban communities, especially those in informal settlements, remain disconnected from road networks. This study presents a road access deprivation model that combines a new accessibility metric, capturing how well buildings are connected to the road network, with road surface type data as a proxy for road quality. These two components together enable the classification of urban areas into low, medium, or high deprivation levels. The model was applied to Nairobi (Kenya), Lagos (Nigeria), and Kano (Nigeria) using open geospatial datasets. Across all three cities, the majority of built-up areas fall into the low and medium road access deprivation levels, while highly deprived areas are comparatively limited. However, the share of highly deprived areas varies substantially, ranging from only 11.8 % in Nairobi to 27.7 % in Kano. Model evaluation against community-sourced validation data indicates good performance for identifying low deprivation areas (F1 > 0.74), moderate accuracy for medium deprivation in Nairobi and Lagos (F1 > 0.52, lower in Kano), and more variable results for high deprivation (F1 ranging from 0.26 in Kano to 0.69 in Nairobi). Furthermore, analysis of grid cells with multiple validations showed strong agreement among community members, with disagreements occurring mainly between adjacent deprivation levels. Finally, we discussed two types of sources for disagreement with community validations: (1) misalignment between the conceptual model and community perceptions, and (2) the operationalization of the conceptual model. In summary, our road access deprivation modeling approach demonstrates promise as a scalable, interpretable tool for ide
+
+### Notes
+
+**Redundancy in validation**
+
+- The paper’s use of redundant community validation is directly relevant for our road digitization activity.
+
+- A small subset of grid cells was validated by multiple participants, enabling explicit measurement of agreement and disagreement.
+
+- Disagreement was typically confined to adjacent classes (low–medium or medium–high), lending credibility to the model while highlighting uncertainty.
+
+- For our own work, it would be valuable to intentionally re-digitize ~1–5% of road blocks with multiple annotators.
+
+- With sufficient overlap, we could replicate their ternary plots or similar agreement visualizations to quantify annotation reliability 
+
+
+**Road surface data and conceptual model limitations**
+
+ - One of the most interesting conclusions is that incorporating road surface type may be introducing instability into the model.
+
+- The authors acknowledge that this may reflect an inefficiency or mis-specification in their conceptual model of road deprivation.
+
+- This issue is particularly visible in the interior city in Nigeria, where model predictions diverge from community validation.
+
+- Raises question of whether similar failures would emerge in refugee settlements
+
+- A comparative analysis across dense urban, peri-urban, rural, and humanitarian contexts would be informative.
+
+**Misalignment between road surface type and perceived road quality**
+
+- Authors that road surface type (paved vs. unpaved) may not be a reliable proxy for road quality as experienced by communities.
+
+- Community perceptions of road deprivation sometimes conflict with the conceptual model used to classify access.
+
+- This underscores a broader tension between model-driven definitions of infrastructure quality and lived, context-specific understandings of access and usability. That being said, I do think that paved roads are a reasonable proxy for road conditions in this case. However, this may be an instance of garbage-in-garbage-out in the model workflow because these modelled road pavement products are not excellent. 
+
+**Connections to urban complexity and scaling literature**
+
+- The discussion of Bettencourt and Marchio (2025) is particularly relevant and worth following up.
+
+- Their work on block complexity aligns with complex systems theory and prior readings I have done with James associated with the Santa Fe Institute.
+
+- Block complexity is shown to correlate not only with spatial access but with multiple dimensions of human development (e.g., female literacy, water access, sanitation).
+
+- In contrast, Thomson and Blei (2025) focus on road connectivity measured as meters of road per building, providing a different conceptualization. 
+
+- Also useful for thinking about how different road–building representations encode different assumptions.
+
+**Road classification choices**
+
+- The paper defines a specific class of “motorable roads” using selected OpenStreetMap tags.
+
+- This classification differs from the road classes used in our LCLUC project and may warrant reconsideration. 
+
+- For road extraction modeling, separating roads and footpaths is likely critical.
+
+- Attempting to learn a unified signal for both may lead models to simply detect generic curvilinear features rather than meaningful infrastructure classes.
+
+**Distance-agnostic accessibility metric**
+
+- The distance-agnostic metric—counting the number of buildings obstructing access to the nearest motorable road—is a compelling idea.
+
+- It avoids reliance on distance thresholds, which often fail in dense informal settlements.
+
+- This aspect of the conceptual model seems sound and well motivated.
+
+- Paved roads are a reasonable proxy for road condition, but errors in the road surface classification propagate directly into the deprivation model (“garbage in, garbage out”).
+
+- The authors emphasize that the model is explicitly tailored to urban contexts in Sub-Saharan Africa. What would a model tailored to the refugee context look like? The rural context? The non-sub-Saharan African context?
+
+
+**Figures and presentation**
+
+- The figures throughout the paper are exceptionally strong.
+
+- Site maps, conceptual diagrams, alluvial plots, redundancy analyses, and qualitative validation visuals are executed excellently.
+
+- This paper serves as an excellent model for how to present mixed-methods, participatory geospatial research in future work.
+
+**Useful resources for reference**
+
+GitHub repository (model implementation):
+https://github.com/urbanbigdatacentre/ideamaps-models
+
+Google Earth Engine app (interactive visualization):
+https://ee-hafnersailing.projects.earthengine.app/view/ideamaps-road-access-deprivation
+
+**Broader contribution**
+
+The study demonstrates how open geospatial data, interpretable modeling, and community validation can be combined in data-scarce contexts.
+
+It offers a transferable template while emphasizing the importance of citizen-generated data, capacity building, and methodological transparency
+
+---
+
+## Infrastructure deficits and informal settlements in sub-Saharan Africa [@bettencourtInfrastructureDeficitsInformal2025]
+
+### Abstract
+Sustainable development is an imperative worldwide1–3 but metrics and data on poverty and quality of life have remained too coarse and abstract to characterize challenges adequately and guide practical progress4,5. Nowhere is this challenge greater than in Africa4–6, where we still know little about the spatial details of development3,7–9. Here we leverage a comprehensive, high-precision dataset of building footprints to identify infrastructure deficits and infer informal settlements down to the street block level10–12 everywhere in sub-Saharan Africa. We identify a general pattern of informality with cities showing, on average, greater access to infrastructure and services than rural and peri-urban areas. We show that such patterns of informality are characterized by consistent statistical distributions reflecting uneven local development2,13,14. We also show that these physical measures of informality are systematically associated with many indicators of human deprivation, which form a single principal component co-varying predictably with specific changes in street access to buildings. These results demonstrate that the localization of sustainable development is possible down to the street level at a continental scale and provide a general distributed strategy for accelerating progress in infrastructure and service expansion that taps local innovations in systematic, equitable and context-appropriate ways7,11,12,15.
+
+### Notes**
+
+**Overall objectives**
+
+- block-level map of infrastructure access and inferred informality across Sub-Saharan Africa.
+
+- demonstrates that local street access can be measured systematically and consistently at scale, down to the street-block level, using topology rather than visual or survey-based proxies 
+
+- Unlike Hafner et al., the map is not designed primarily as a decision-support or participatory tool, but as an analytical and diagnostic representation of structural development patterns.
+
+
+**Comparison with Hafner et al. 2025**
+
+- Both papers center road and street access as the fundamental mediator of infrastructure and service provision.
+
+- Bettencourt emphasizes universality, theory, and scaling laws
+
+- Hafner creates a rule-based deprivation framework explicitly tailored to urban planning contexts.
+
+- Bettencourt retains a continuous, topology-based metric and *avoids hard thresholds or classes*.
+
+**Maximum inaccessibility vs averaged accessibility**
+
+- Bettencourt defines block complexity (k) using the least-accessible building within each block This contrasts with Hafner’s use of averaged or aggregated accessibility metrics over grid cells or neighborhoods. mean or median access can hide severe deficits experienced by a subset of residents. Using the maximum simulates the cost of bringing crucial infrastructure to the entire block. 
+
+**Urban, peri-urban, and rural systems**
+
+- A major contribution is the explicit, systematic treatment of urban, secondary urban, peri-urban, and rural regions.
+
+- The most extreme access deprivation is relatively rare in dense urban cores, but more prevalent in peri-urban and rural areas. Cities generally outperform their surrounding regions in infrastructure access and human development indicators. This reframes informality as a territorial continuum, not an exclusively urban-slum phenomenon.
+
+**Relationships between inaccessibility and human development indicators**
+- Block complexity is strongly and consistently associated with a wide range of outcomes, including: female literacy, access to water on premises, access to improved sanitation, education attainment, household wealth, health outcomes (child mortality, stunting, facility-based births).
+
+- Correlations are statistically significant across all 67 DHS indicators tested (P < 0.001).
+
+- These indicators collapse onto a single dominant principal component, explaining ~48% of total variance, interpreted as a general human development gradient.
+
+**Fixed effects modeling**
+
+- Fixed effects ensure that associations are identified from within-country variation, not driven by differences between nations.
+
+- Model fit improves substantially when country fixed effects are included (R² ≈ 0.61), and further improves when controlling for urbanization (R² ≈ 0.82).
+
+- Once block complexity and urban population share are included, other built-environment metrics—road density, building size, building-to-land-area ratio, population density—are not statistically significant (P > 0.25).
+
+**Theory and conceptual framing**
+
+- Informality is reframed as a topological failure of access, not a morphological or aesthetic condition.
+
+- Street access is enables service delivery, emergency response, institutional recognition (addresses, tenure), socioeconomic participation. This provides a theoretical basis for why a single access metric can predict multidimensional deprivation.
+
+**Causality and interpretation**
+
+- direct effects of access deprivation on service provision and opportunity, and sorting 0f disadvantaged populations in less-accessible areas produce the observed large-scale patterns.
