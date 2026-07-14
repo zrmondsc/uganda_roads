@@ -7,8 +7,8 @@ data:
 
 outputs:
   dynamic_maps: outputs/maps/dynamic
-  static_maps: output/maps/static
-  figures: output/figures
+  static_maps: outputs/maps/static
+  figures: outputs/figures
   tables: outputs/tables
 
 imagery:

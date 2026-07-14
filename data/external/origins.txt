@@ -14,3 +14,6 @@ acquired from Jamon Van Den Hoek
 
 "data\external\maxar_footprints_with_sensor.geojson"
 acquired from Zhanpei Fang
+
+
+ scp C:\Users\Zachary\phd_classes\uganda\data\external\maxar_footprints_with_sensor.geojson

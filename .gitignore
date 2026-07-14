@@ -1,13 +1,53 @@
-data/processed/*.geojson
-outputs/maps/dynamic/*.hmtl
-data/imagery/nakivale_sample/*
-scripts/search_chip_maxar.py
+# ── Processed / derived spatial data ────────────────────────────────────────
+data/processed/
+
+# ── Large GEE exports (remote-sensing rasters & CSVs) ────────────────────────
+data/external/LST/
+data/external/SPEI/
+data/external/Hansen_Forest/
+data/external/GEE_exportsDEM/
+data/external/Precip/
+data/external/Crop Cover/
+data/external/AG_*.csv
+
+# ── HOT OSM large dumps ───────────────────────────────────────────────────────
 data/external/hotosm_populated_places.geojson
 data/external/hotosm_waterways.geojson
+
+# ── Maxar imagery chips (large, HPC-side) ────────────────────────────────────
+data/imagery/nakivale_sample/*
+
+# ── Generated outputs ─────────────────────────────────────────────────────────
+outputs/maps/dynamic/
+outputs/maps/static/
+outputs/kiryandongo/
+outputs/lightning/
+outputs/nakivale/
+outputs/presentations/
+
+# ── Notebooks: cache and archive ──────────────────────────────────────────────
+notebooks/cache/
+notebooks/archive/
+
+# ── Claude Code ───────────────────────────────────────────────────────────────
+.claude/
+CLAUDE.md
+
+# ── Office files ──────────────────────────────────────────────────────────────
 docs/presentation/*.docx
 docs/presentation/*.pptx
 docs/other/*.docx
 docs/other/*.xlsx
 docs/other/*.png
+docs/other/demo/
 docs/drafts/*.pdf
+docs/drafts/*.docx
+# Office temp/lock files
+~$*
+~WRL*.tmp
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
 .env
+
+# ── Scripts (HPC-specific, not for general use) ───────────────────────────────
+scripts/search_chip_maxar.py
